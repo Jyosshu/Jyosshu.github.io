@@ -1,6 +1,5 @@
 header div.profile_photo_holder {
-    height: 200px;
-    border-radius: 50%;
+    height: 50px;
 }
 img {
     height: 200px;
