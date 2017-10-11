@@ -1,4 +1,54 @@
-profile_photo_editor {
+body {
+    background-color: #FFFFFF;
+    color: #373737;
+    text-align: left;
+    margin: 30px 10px 0;
+    font-family: Verdana, Geneva, sans-serif;
+}
+div.left-column {
+    position: left;
+    width: 500;
+    position: left;
+    background-color: aquamarine;
+}
+div.profile_photo_holder {
+    position: center;
+}
+img {
+    margin: 0px 75px 0px 75px;
+    height: 250px;
+    border: 2px;
+    border-color: black;
+    border-radius: 5%;
+}
+div.left-column {
+    position: top, left;
     width: 500px;
-    border-radius: 50%;
+}
+div.profile-links {
+    text-align: center;
+}
+
+div.left-column h1 {
+    text-align: center;
+}
+div.left-column h2 {
+    text-align: center;
+}
+
+div.right-column {
+    background-color: red;
+    width: 500px;
+    position: top,right;
+}
+
+h4 {
+text-align: left;
+}
+article {
+    background-color: gray;
+   
+}
+nav {
+    text-align: center;
 }
