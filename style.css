@@ -2,14 +2,62 @@ body {
     background-color: #FFFFFF;
     color: #373737;
     text-align: left;
-    margin: 30px 10px 0;
     font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    margin-top: 70px;
 }
-div.left-column {
-    position: left;
-    width: 500;
-    position: left;
-    background-color: aquamarine;
+.wrapper {
+    position: absolute;
+    display: grid;
+    margin-top: 0px;
+    width: 100%;
+
+    background-color: black;
+}
+.wrapper > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.wrapper > ul > li {
+    float: left;
+}
+.wrapper {
+    display: grid;
+    grid-gap: .1em;
+    grid-template-areas:
+    "header"
+    "navLeft"
+    "navRight"
+  }
+
+  @media only screen and (min-width: 650px)  {
+  	.wrapper {
+        grid-template-columns: auto
+                            auto auto;
+        grid-template-areas:
+                "header"
+        "navLeft"   "navRight"
+	}
+}
+
+.navLeft {
+    grid-area: navLeft;
+}
+
+.header {
+    grid-area: header;
+}
+
+.navRight {
+    grid-area: navCenter;
+}
+ul:before{
+    content:attr(data-header);
+    font-weight: bold;
 }
 div.profile_photo_holder {
     position: center;
@@ -19,7 +67,7 @@ img {
     height: 250px;
     border: 2px;
     border-color: black;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 div.left-column {
     position: top, left;
@@ -49,6 +97,4 @@ article {
     background-color: gray;
    
 }
-nav {
-    text-align: center;
-}
+

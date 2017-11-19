@@ -1,12 +1,51 @@
 <html>
     <head>
         <title>Josh Wygle | ジョッシュ・ワイグル</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="left-column">
-            <h1>Josh Wygle</h1>
-            <h2>Junior Software Developer</h2>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <!--<a class="navbar-brand" href="#">Navbar</a>-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#vending-machine">VendingMachine</a>
+                        <a class="dropdown-item" href="#campground-reservation">Parks Reservation</a>
+                        <a class="dropdown-item" href="#national-parks">National Parks</a>
+                        <a class="dropdown-item" href="https://mighty-fjord-93438.herokuapp.com/">Movies!</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+                <div class="navRight"> Josh Wygle </div>
+                <div class="header"> Junior Software Developer </div>
+
             <div class="profile_photo_holder">
                 <img src="josh1.jpg" alt="A photo of Josh Wygle">
             </div>
@@ -23,19 +62,46 @@
              </p>
         </div>
         <section>
-            <article>
-                    <h4>Technologies</h4>
-                    <strong>Object-Oriented Programming:</strong> Java<br>
-                    <strong>Web Development:</strong>  HTML, CSS, Javascript<br>
-                    <strong>Database:</strong> table design and creation, SQL queries and DML, PostgreSQL<br>
-                    <strong>Development Tools:</strong> unit testing (JUnit), TDD, unix command line navigation, Git, Eclipse, DBVisualizer
-            </article>
-            <article>
-                    <strong>Technical Projects</strong>
-                    <a href="https://github.com/Jyosshu/VendingMachine">Module 1 Capstone - VendingMachine:</a> A command-line application using Java designed to load inventory from a CSV file, process a customer’s choices and keep a sales log file for inventory purposes.
-            </article>
 
-            <article>
+                    <ul data-header="Technologies">
+                    <li>Object-Oriented Programming: Java</li>
+                    <li>Web Development: HTML, CSS, Javascript, jQuery, Javascript, Servlets, JSP, Spring Web MVC, Tomcat</li>
+                    <li>Database: JDBC, table design and creation, SQL queries and DML, PostgreSQL</li>
+                    <li>Development Tools: unit testing (JUnit), TDD, unix command line navigation, Git, Eclipse, DBVisualizer</li>
+                    </ul>
+
+
+            <ul class="list-unstyled">
+                <li class="media" id="vending-machine">
+                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1"> Module 1 Capstone - VendingMachine </h5> <a href="https://github.com/Jyosshu/VendingMachine" target="_blank">(source)</a>
+                        A command-line application using Java designed to load inventory from a CSV file, process a customer’s choices and keep a sales log file for inventory purposes.
+                    </div>
+                </li>
+                <li class="media my-4"  id="campground-reservation">
+                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1"> Module 2 Capstone - Parks reservation </h5> <a href="https://github.com/Jyosshu/Park_Campground_Reservation" target="_blank">(source)</a>
+                        A command-line application using Java and PostgreSQL to view parks, their campgrounds, and reserve campsites.  Reservations were checked against existing reservations and then stored in a database.
+                    </div>
+                </li>
+                <li class="media" id="movies">
+                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1"> Movies! </h5> <a href="https://mighty-fjord-93438.herokuapp.com/" target="_blank">(site)</a>
+                        A small site that I used to pull movie data from a Postgresql database to display in list and detail views.
+                    </div>
+                </li>
+                <li class="media" id="national-parks">
+                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1"> Module 3 Capstone: National Parks </h5> <a href="https://github.com/Jyosshu/National_Parks" target="_blank">(source)</a> <a href="https://ghostly-asylum-29727.herokuapp.com/" target="_blank">(site)</a>
+                        A web based application using Java, PostgreSQL, Spring Web MVC and Tomcat.  This application took user requests to view detailed park descriptions where users could determine measurement output that would be stored in their session.  Users were able to complete a park survey that was stored to a database.
+                    </div>
+                </li>
+            </ul>
+            <article id="education">
                     <h4>Education</h4>
                         <p>
                             <em>Tech Elevator	Aug 2017 - Present</em><br>
