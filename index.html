@@ -6,7 +6,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
@@ -24,7 +24,7 @@
                     <a class="nav-link" href="#education">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#technologies">Technologies</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,8 +33,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#vending-machine">VendingMachine</a>
                         <a class="dropdown-item" href="#campground-reservation">Parks Reservation</a>
+                        <a class="dropdown-item" href="#movies">Movies!</a>
                         <a class="dropdown-item" href="#national-parks">National Parks</a>
-                        <a class="dropdown-item" href="https://mighty-fjord-93438.herokuapp.com/">Movies!</a>
                     </div>
                 </li>
             </ul>
@@ -43,81 +43,89 @@
 
         <div class="wrapper">
 
-                <div class="navRight"> Josh Wygle </div>
-                <div class="header"> Junior Software Developer </div>
+            <div class="navRight"> Josh Wygle </div>
+            <div class="header"> Junior Software Developer </div>
 
-            <div class="profile_photo_holder">
-                <img src="/josh1.jpg" alt="A photo of Josh Wygle">
-            </div>
-        
             <div class="profile-links">
-                <a href="https://github.com/Jyosshu">GitHub</a> 
+                <a href="https://github.com/Jyosshu">GitHub</a>
                 <a href ="https://www.linkedin.com/in/josh-wygle/">LinkedIn</a>
             </div>
-        </div>
-        <div class="right-column">
-            <p>
-                    Entry-level software developer looking to utilize my analytical skills and business experience to further grow as a developer, 
+            <div class="profile_photo_holder">
+                <img class="profile_photo" src="img/josh1.jpg" alt="A photo of Josh Wygle">
+            </div>
+
+            <div class="pitch">
+                <p>
+                    Entry-level software developer looking to utilize my analytical skills and business experience to further grow as a developer,
                     while also collaborating in a positive team environment.
-             </p>
+                 </p>
+            </div>
         </div>
-        <section>
+        <div class="offset-anchor projects" id="technologies">
+            <h5>Technologies</h5>
+            <ul>
+                <li>Object-Oriented Programming: Java</li>
+                <li>Web Development: HTML, CSS, Javascript, jQuery, Javascript, Servlets, JSP, Spring Web MVC, Tomcat</li>
+                <li>Database: JDBC, table design and creation, SQL queries and DML, PostgreSQL</li>
+                <li>Development Tools: unit testing (JUnit), TDD, unix command line navigation, Git, Eclipse, DBVisualizer</li>
+            </ul>
+        </div>
+        <div class="offset-anchor projects" id="education">
+            <h5>Education</h5>
+            <ul>
+                <li><em>Tech Elevator	Aug 2017 - Dec 2017</em></li>
+                <li>Java Development	Cleveland, OH</li>
+                <li>14-week Java coding bootcamp learning how to develop dynamic web based software systems using the Java programming language and platform including.</li>
+            </ul>
+            <ul>
+                <li><em>Kent State University	Aug 1999 - April 2005</em></li>
+                <li>Candidate for Bachelor of Arts in Political Science	Kent, OH</li>
 
-                    <ul data-header="Technologies">
-                    <li>Object-Oriented Programming: Java</li>
-                    <li>Web Development: HTML, CSS, Javascript, jQuery, Javascript, Servlets, JSP, Spring Web MVC, Tomcat</li>
-                    <li>Database: JDBC, table design and creation, SQL queries and DML, PostgreSQL</li>
-                    <li>Development Tools: unit testing (JUnit), TDD, unix command line navigation, Git, Eclipse, DBVisualizer</li>
-                    </ul>
-
-
+                <li>Intro to Computer Programming</li>
+                <li>Intro to Computer Science</li>
+                <li>Intro to Object Oriented Programming</li>
+                <li>Data Structures</li>
+            </ul>
+        </div>
+        <div class="projects">
             <ul class="list-unstyled">
-                <li class="media" id="vending-machine">
-                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                <li class="media offset-anchor" id="vending-machine">
+                    <img class="mr-3 img-thumbnail project-image-resize" src="img/vending_machine.png" alt="CLI Vending Machine" data-toggle="modal" data-target="#myModal">
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"> Module 1 Capstone - VendingMachine </h5> <a href="https://github.com/Jyosshu/VendingMachine" target="_blank">(source)</a>
                         A command-line application using Java designed to load inventory from a CSV file, process a customer’s choices and keep a sales log file for inventory purposes.
                     </div>
                 </li>
-                <li class="media my-4"  id="campground-reservation">
-                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                <li class="media offset-anchor"  id="campground-reservation">
+                    <img class="mr-3 img-thumbnail project-image-resize" src="img/campground_reservation.png" alt="CLI Campground Reservation" data-toggle="modal" data-target="#myModal">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"> Module 2 Capstone - Parks reservation </h5> <a href="https://github.com/Jyosshu/Park_Campground_Reservation" target="_blank">(source)</a>
                         A command-line application using Java and PostgreSQL to view parks, their campgrounds, and reserve campsites.  Reservations were checked against existing reservations and then stored in a database.
                     </div>
                 </li>
-                <li class="media" id="movies">
-                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                <li class="media offset-anchor" id="movies">
+                    <img class="mr-3 img-thumbnail project-image-resize" src="img/movies.png" alt="Movies!" data-toggle="modal" data-target="#myModal">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"> Movies! </h5> <a href="https://mighty-fjord-93438.herokuapp.com/" target="_blank">(site)</a>
                         A small site that I used to pull movie data from a Postgresql database to display in list and detail views.
                     </div>
                 </li>
-                <li class="media" id="national-parks">
-                    <img class="mr-3" src="..." alt="Generic placeholder image">
+                <li class="media offset-anchor" id="national-parks">
+                    <img class="mr-3 img-thumbnail project-image-resize" src="img/national_park_geek.png" alt="National Park Geek" data-toggle="modal" data-target="#myModal">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"> Module 3 Capstone: National Parks </h5> <a href="https://github.com/Jyosshu/National_Parks" target="_blank">(source)</a> <a href="https://ghostly-asylum-29727.herokuapp.com/" target="_blank">(site)</a>
                         A web based application using Java, PostgreSQL, Spring Web MVC and Tomcat.  This application took user requests to view detailed park descriptions where users could determine measurement output that would be stored in their session.  Users were able to complete a park survey that was stored to a database.
                     </div>
                 </li>
             </ul>
-            <article id="education">
-                    <h4>Education</h4>
-                        <p>
-                            <em>Tech Elevator	Aug 2017 - Present</em><br>
-                            Java Development	Cleveland, OH<br>
-                            14-week Java coding bootcamp learning how to develop dynamic web based software systems using the Java programming language and platform including.
-                        </p> 
-                        <p>  
-                            <em>Kent State University	Aug 1999 - April 2005</em><br>
-                            Candidate for Bachelor of Arts in Political Science	Kent, OH<br>
-                            <ul>Intro to Computer Programming</ul>
-                            <ul>Intro to Computer Science</ul>
-                            <ul>Intro to Object Oriented Programming</ul>
-                            <ul>Data Structures</ul>
-                        </p>
-            </article>
-        </section>
+        </div>
     </body>
 
 </html>

@@ -1,18 +1,81 @@
 body {
     background-color: #FFFFFF;
-    color: #373737;
+   /* color: #373737; */
     text-align: left;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 1em;
-    margin-top: 70px;
+    margin: 75px 50px 50px 50px;
 }
-.wrapper {
-    position: absolute;
+/* Apply to elements that serve as anchors */
+.offset-anchor {
+  border-top: 75px solid transparent;
+  margin: -75px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/*Because offset-anchor causes sections to overlap the bottom of previous ones,
+we need to put content higher so links aren't blocked by the transparent border.*/
+.container {
+  position: relative;
+  z-index: 1;
+}
+.profile_photo {
+    margin: 0px 75px 0px 75px;
+    height: 250px;
+    border: 2px;
+    border-color: black;
+    border-radius: 2%;
+    filter: grayscale(100%);
+}
+.project-image-resize {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 250px;
+    height: 250px;
+
+}
+.project-image-resize:hover {
+    opacity: 0.7;
+}
+
+.pitch {
+    margin: auto;
+    background-color: gray;
+    width: 60%;
+    position: centered;
+    padding: 1em;
+}
+ul:before{
+    content:attr(data-header);
+    font-weight: bold;
+}
+.projects {
+    max-width: 80%;
+}
+div ul {
+    list-style-type: none;
+}
+
+.list-unstyled li {
+    padding: 1em;
+}
+.list-unstyled li:nth-child(even) {
+    background-color: gray;
+}
+.page-link{
+    position:absolute;
+    top:-200px;
+}
+/*.wrapper {
+    position: relative;
     display: grid;
     margin-top: 0px;
     width: 100%;
 
-    background-color: black;
+   */
+   /*
 }
 .wrapper > ul {
     list-style-type: none;
@@ -32,9 +95,12 @@ body {
     "header"
     "navLeft"
     "navRight"
-  }
+  }*/
 
-  @media only screen and (min-width: 650px)  {
+  @media only screen and (max-width: 650px)  {
+    .project-image-resize{
+        display: none;
+    }
   	.wrapper {
         grid-template-columns: auto
                             auto auto;
@@ -44,10 +110,6 @@ body {
 	}
 }
 
-.navLeft {
-    grid-area: navLeft;
-}
-
 .header {
     grid-area: header;
 }
@@ -55,46 +117,12 @@ body {
 .navRight {
     grid-area: navCenter;
 }
-ul:before{
-    content:attr(data-header);
-    font-weight: bold;
-}
-div.profile_photo_holder {
+
+.profile_photo_holder {
     position: center;
 }
-img {
-    margin: 0px 75px 0px 75px;
-    height: 250px;
-    border: 2px;
-    border-color: black;
-    border-radius: 2%;
-}
-div.left-column {
-    position: top, left;
-    width: 500px;
-}
-div.profile-links {
-    text-align: center;
-}
 
-div.left-column h1 {
+.profile-links {
     text-align: center;
-}
-div.left-column h2 {
-    text-align: center;
-}
-
-div.right-column {
-    background-color: red;
-    width: 500px;
-    position: top,right;
-}
-
-h4 {
-text-align: left;
-}
-article {
-    background-color: gray;
-   
 }
 
