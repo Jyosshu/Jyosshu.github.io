@@ -42,7 +42,8 @@ we need to put content higher so links aren't blocked by the transparent border.
 
 .pitch {
     margin: auto;
-    background-color: gray;
+    background-color: black;
+    color: white;
     width: 60%;
     position: centered;
     padding: 1em;
@@ -51,8 +52,16 @@ ul:before{
     content:attr(data-header);
     font-weight: bold;
 }
+#technologies {
+    background-color: #4b4949;
+    padding: 1em; 
+}
+#education {
+    background-color: gray;
+    padding: 1em;
+}
 .projects {
-    max-width: 80%;
+    max-width: 90%;
 }
 div ul {
     list-style-type: none;
@@ -60,6 +69,9 @@ div ul {
 
 .list-unstyled li {
     padding: 1em;
+}
+.list-unstyled li:nth-child(odd) {
+    background-color: #4b4949;
 }
 .list-unstyled li:nth-child(even) {
     background-color: gray;
